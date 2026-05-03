@@ -1,0 +1,31 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+    font-family: Arial, Helvetica, sans-serif;
+    text-shadow: #000 1px 1px 2px;
+    color: white;
+}
+
+.container.contents {
+    padding: 0;
+    border: none;
+    background: transparent;
+}
+
+#canvas {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 629px;
+    height: 424px;
+    z-index: 9999;
+    image-rendering: pixelated;
+    transform: translate(-50%, -50%);
+}
+
+a {
+    color: rgb(230, 80, 80);
+    text-decoration: underline;
+}

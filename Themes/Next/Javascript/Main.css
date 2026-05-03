@@ -1,0 +1,403 @@
+@import url('bootstrap.min.css');
+
+body {
+    background: #EEE;
+}
+
+footer {
+    color: #CCC;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+.FooterTOS {
+    float: right;
+}
+
+.FooterExtra {
+    float: left;
+}
+
+.container {
+    width: 800px;
+}
+
+.title {
+    padding: 5px;
+}
+
+.ad-container {
+    float: right;
+    position: relative;
+    margin-bottom: 1.5em;
+    border: 2px solid #999999;
+    border-radius: 2px;
+}
+
+.ad-container:after {
+    content: "Advertisement";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 85%;
+}
+
+.page-header {
+    padding-bottom: 10px;
+    margin: 0 0 10px 0;
+}
+
+.site-header h1 {
+    margin-bottom: 0 !important;
+    float: left;
+    padding: 15px 0 15px 64px;
+    background: url("Images/Icon.png");
+    background-repeat: no-repeat;
+    background-position: center left;
+}
+
+.controls p {
+    color: #AAA;
+    margin-top: 3px;
+}
+
+.site-header {
+    margin-bottom: 25px;
+}
+
+.contents {
+    padding: 10px;
+    background: white;
+    border: 1px solid #DDD;
+}
+
+.outside-header {
+    padding: 7px 14px;
+    margin: 0 0 18px;
+    list-style: none;
+    background-color: #FBFBFB;
+    background-image: -moz-linear-gradient(top, white, whiteSmoke);
+    background-image: -ms-linear-gradient(top, white, whiteSmoke);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(white), to(whiteSmoke));
+    background-image: -webkit-linear-gradient(top, white, whiteSmoke);
+    background-image: -o-linear-gradient(top, white, whiteSmoke);
+    background-image: linear-gradient(top, white, whiteSmoke);
+    background-repeat: repeat-x;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    filter: progid:dximagetransform.microsoft.gradient(startColorstr='#ffffff', endColorstr='#f5f5f5', GradientType=0);
+    -webkit-box-shadow: inset 0 1px 0 white;
+    -moz-box-shadow: inset 0 1px 0 #fff;
+    box-shadow: inset 0 1px 0 white;
+}
+
+.main-menu {
+    width: 100%;
+    height: 34px;
+    background-color: #EEE;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+    background-image: -webkit-linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+    background-image: -ms-linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+    background-image: -o-linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f5f5f5', endColorstr='#eeeeee', GradientType=0);
+    background-image: linear-gradient(top, whiteSmoke 0%, #EEE 100%);
+    border: 1px solid #D5D5D5;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    box-shadow: 0px 3px 27px rgba(0, 0, 0, 0.08);
+    -ms-box-shadow: 0px 3px 27px rgba(0, 0, 0, 0.08);
+    -moz-box-shadow: 0px 3px 27px rgba(0, 0, 0, 0.08);
+    -o-box-shadow: 0px 3px 27px rgba(0, 0, 0, 0.08);
+}
+
+.main-menu .nav {
+    margin: 0;
+}
+
+.pagination a {
+    padding: 0 10px;
+    line-height: 26px;
+}
+
+.breadcrumb {
+    margin-bottom: 7px;
+}
+
+.pagination {
+    height: 28px;
+    margin: 0;
+}
+
+.Pagination {
+    float: right;
+}
+
+.main-menu .nav>li>a {
+    margin: 0;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-left: 1px solid whiteSmoke;
+    border-right: 1px solid #E5E5E5;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.main-menu .nav>.active>a,
+.main-menu .nav>.active>a:hover {
+    padding-left: 13px;
+    color: #777;
+    background-color: #E9E9E9;
+    border-right-color: #DDD;
+    border-left: 0;
+    -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .05);
+    -moz-box-shadow: inset 0 3px 5px rgba(0, 0, 0, .05);
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, .05);
+}
+
+.main-menu .nav>li:first-child>a,
+.main-menu .nav>li:first-child>a:hover {
+    border-left: 0;
+    padding-left: 12px;
+    -webkit-border-radius: 4px 0 0 4px;
+    -moz-border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+
+.main-menu .nav>li:first-child>a,
+.main-menu .nav>li:first-child>a:hover {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.main-menu .nav>li:last-child>a {
+    border-right: 0;
+}
+
+form.navbar-search.pull-right {
+    margin-top: 3px;
+    margin-right: 3px;
+}
+
+#mod-dropdown .badge span,
+#mod-dropdown .badge i {
+    vertical-align: middle;
+}
+
+#user-dropdown .badge span,
+#user-dropdown .badge i {
+    vertical-align: middle;
+}
+
+.boxmein-silly-pony-markup {
+    display: none;
+}
+
+.btn-huge {
+    padding: 14px 20px;
+    font-size: 18px;
+    line-height: normal;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.savegame-outer {
+    float: left;
+    margin: 0;
+}
+
+.savegame {
+    background-color: white;
+    box-sizing: content-box;
+    width: fit-content;
+    height: 128px;
+    margin: 9px;
+    position: relative;
+    display: block;
+    padding: 4px;
+    line-height: 1;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    -moz-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075);
+
+    transition: -webkit-box-shadow 0.5s;
+    transition: border 0.5s;
+}
+
+.savegame:hover {
+    border-color: #08C;
+    -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+    -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+    box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
+}
+
+.savegame .caption {
+    padding: 2px 0 0 0;
+}
+
+.savegame .caption .comments,
+.savegame .caption .author {
+    font-size: 10px;
+}
+
+.savegame .caption .comments {
+    float: right;
+}
+
+.savegame .caption .author {
+    float: left;
+    max-width: 90px;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.savegame .caption::after {
+    clear: both;
+}
+
+.savegame .caption::after,
+.savegame .caption::before {
+    display: table;
+    content: "";
+}
+
+.savegame .caption a {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: block;
+}
+
+.savegame .overlay {
+    position: absolute;
+    width: 153px;
+    height: 96px;
+    padding: 3px 3px 0 3px;
+}
+
+.savegame .overlay input.btn {
+    margin-bottom: 3px;
+    display: block;
+    width: 147px;
+}
+
+.savegame .overlay a.btn {
+    margin-bottom: 3px;
+    display: block;
+    width: 125px;
+}
+
+.savegame form {
+    margin: 0;
+}
+
+.savegame img {
+    image-rendering: crisp-edges;
+}
+
+.gravatar {
+    position: relative;
+    z-index: 1;
+}
+
+.gravatar-inner {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    -moz-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    -webkit-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    -o-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    -ms-box-shadow: 0 0 5px rgba(0, 0, 0, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.4);
+    border-radius: 3px;
+    background: linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -o-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+    background: -ms-linear-gradient(top, rgba(255, 255, 255, 0.1) 0%, rgba(0, 0, 0, 0.1) 100%);
+}
+
+.gravatar img {
+    border-radius: 3px;
+    position: relative;
+    z-index: -1;
+}
+
+.main-menu .gravatar {
+    display: inline-block;
+    margin: 5px 5px 0 5px;
+}
+
+.main-menu .gravatar-inner {
+    border-radius: 2px;
+}
+
+.main-menu .gravatar img {
+    border-radius: 2px;
+    width: 24px;
+    height: 24px;
+}
+
+.clear,
+.Clear {
+    clear: both;
+}
+
+.Administrator {
+    background-color: rgb(235, 245, 255);
+}
+
+.Moderator,
+.HalfMod {
+    background-color: rgb(235, 255, 235);
+}
+
+.Moderator .Author,
+.Administrator .Author,
+.HalfMod .Author {
+    padding-right: 20px;
+    background-position: right center;
+    background-image: url("Images/Shield.png");
+    background-repeat: no-repeat;
+}
+
+.Developer {
+    background-color: rgb(235, 240, 240);
+}
+
+.Developer .Author {
+    padding-right: 20px;
+    background-position: right center;
+    background-image: url("Images/Developer.png");
+    background-repeat: no-repeat;
+}
+
+.Mine {
+    background-color: #FFFFDC;
+}
+
+.Op {
+    background-color: rgb(255, 235, 235);
+}
+
+.form-full fieldset {
+    padding: 15px;
+}
+
+.form-full {
+    margin: 0;
+}
+
+.form-full .form-actions {
+    margin: 0;
+}

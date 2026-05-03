@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="Themes/Next/Javascript/Main.css" type="text/css">
+    <link rel="stylesheet" href="Wasm.css" type="text/css">
+    <script src="Themes/Next/Javascript/jQuery.min.js"></script>
+    <script src="Themes/Next/Javascript/bootstrap.min.js"></script>
+    <script src="Themes/Next/Javascript/Main.js"></script>
+    <title>The Powder Toy</title>
+    <script src="wasm/powder.js"></script>
+</head>
+
+<body>
+    <h1>WebAssembly port of The Powder Toy </h1>
+    <p>Source: <a href="https://github.com/ossftw/tpt-wasm">https://github.com/ossftw/tpt-wasm</a></p>
+    <div class="container contents">
+        <div class="Page" id="Page">
+            <div class="Subpage">
+                <form id="PowderSessionInfo" style="display: none;">
+                    <input type="hidden" name="Username" value="">
+                    <input type="hidden" name="SessionKey" value="">
+                </form>
+                <p id="status" style="display: none;">Loading...</p>
+                <img id="loading" src="Themes/Next/Design/wasm-loading.webp" style="display: none;">
+                <canvas style="display: initial; cursor: default;" class="emscripten" id="canvas"
+                    oncontextmenu="event.preventDefault()" tabindex="-1" width="629" height="424"></canvas>
+                <script type="text/javascript">
+                    const variant = new URLSearchParams(window.location.search).get('variant') || 'powder';
+                    (() => {
+                        var promise;
+
+                        window.create_powder_loader = () => {
+                            if (promise === undefined) {
+                                promise = new Promise((resolve, reject) => {
+                                    const script = document.createElement("script");
+                                    script.onload = () => {
+                                        resolve(window['create_' + variant]);
+                                    };
+                                    document.head.appendChild(script);
+                                    script.src = 'wasm/' + variant + '.js';
+                                });
+                            }
+                            return promise;
+                        };
+                    })();
+                    (() => {
+                        var canvas = document.getElementById('canvas');
+                        var status = document.getElementById('status');
+                        var loading = document.getElementById('loading');
+                        window.mark_presentable = function () {
+                            loading.style.display = 'none';
+                            canvas.style.display = 'initial';
+                        };
+                        window.onerror = (event) => {
+                            status.innerText = 'Exception thrown, see JavaScript console';
+                            status.style.display = 'initial';
+                        };
+                        create_powder_loader().then(create_powder => create_powder({
+                            canvas: (() => {
+                                canvas.addEventListener("webglcontextlost", e => {
+                                    alert('WebGL context lost. You will need to reload the page.'); e.preventDefault();
+                                }, false);
+                                return canvas;
+                            })(),
+                            print: console.log,
+                            printErr: console.log,
+                        }));
+                    })();
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
