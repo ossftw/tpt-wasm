@@ -1,6 +1,15 @@
 var ptjq = jQuery.noConflict();
 var $ = ptjq;
 
+const originalFetch = window.fetch;
+window.fetch = function(url, options) {
+  if (typeof url === 'string' && url.includes('powdertoy.co.uk/Startup.json')) {
+    url = '/api/startup';
+  }
+  return originalFetch.call(this, url, options);
+};
+
+
 $(document).bind("ready", function(){
 	$("#ShowChangeLog").mousedown(function(){
 		$("#ChangeLogHidden").slideDown("fast");
